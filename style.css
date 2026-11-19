@@ -2,4 +2,25 @@ body {
 background-color: darkgoldenrod;
 
 
+
 }
+
+body {
+    background-color: #f1f8e9;
+    font-family: Arial, sans-serif;
+    color: #40503e;
+    margin: 20px;
+}
+
+h1 {
+    background-color: darkgoldenrod;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 30px;
+}
+
+
+/* CONFIGURAÇÃO GERAL */
+
