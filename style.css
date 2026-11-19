@@ -1,26 +1,160 @@
-body {
-background-color: darkgoldenrod;
 
-
-
-}
+/* Configuração geral */
 
 body {
-    background-color: #f1f8e9;
     font-family: Arial, sans-serif;
-    color: #40503e;
-    margin: 20px;
+    background-color: white;
+    color: black;
+    margin: 0;
+    padding: 0;
 }
 
-h1 {
-    background-color: darkgoldenrod;
+/* Cabeçalho */
+
+header {
+    background-color: #16834a;
     color: white;
     text-align: center;
-    padding: 25px;
-    border-radius: 12px;
+    padding: 20px;
+}
+
+header h1 {
     font-size: 30px;
 }
 
+header p {
+    font-size: 20px;
+}
 
-/* CONFIGURAÇÃO GERAL */
+/* Conteúdo */
 
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+/* Seções sem caixas */
+
+section {
+    background: none;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: none;
+}
+
+/* Títulos */
+
+h2 {
+    color: #16834a;
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #16834a;
+    font-size: 19px;
+}
+
+/* Parágrafos */
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Imagens */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+}
+
+.introducao img {
+    width: 300px;
+}
+
+.imagem-mundo {
+    width: 500px;
+}
+
+.imagem-metas {
+    width: 650px;
+}
+
+/* Os 5 Rs sem cartões */
+
+.container-rs {
+    display: block;
+    margin-top: 15px;
+}
+
+.card {
+    background: none;
+    border: none;
+    padding: 5px 0;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: #16834a;
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin-top: 5px;
+}
+
+/* Listas */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #16834a;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+footer h2 {
+    color: white;
+}
+
+footer p {
+    text-align: center;
+}
+
+.creditos {
+    font-size: 13px;
+}
+
+/* Celulares */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .imagem-mundo,
+    .imagem-metas {
+        width: 100%;
+    }
+
+}
