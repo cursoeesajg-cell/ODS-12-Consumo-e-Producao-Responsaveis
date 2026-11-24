@@ -1,76 +1,104 @@
 
-/* Configuração geral */
+/* CONFIGURAÇÃO GERAL */
+
+* {
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
-    color: black;
+    background-color: #f4faf5;
+    color: #222;
     margin: 0;
     padding: 0;
 }
 
-/* Cabeçalho */
+/* CABEÇALHO */
 
 header {
     background-color: #16834a;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+    border-radius: 0 0 25px 25px;
 }
 
 header h1 {
     font-size: 30px;
+    background: #116b3c;
+    padding: 18px;
+    border-radius: 18px;
+    display: inline-block;
 }
 
 header p {
-    font-size: 20px;
+    font-size: 18px;
+    background: #ffffff;
+    color: #16834a;
+    padding: 15px;
+    border-radius: 15px;
 }
 
-/* Conteúdo */
+/* CONTEÚDO */
 
 main {
     width: 85%;
     max-width: 1000px;
-    margin: 25px auto;
+    margin: 30px auto;
 }
 
-/* Seções sem caixas */
+/* SEÇÕES EM CAIXAS */
 
 section {
-    background: none;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    border: none;
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border: 2px solid #d8efdf;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(22, 131, 74, 0.08);
 }
 
-/* Títulos */
+/* TÍTULOS */
 
 h2 {
-    color: #16834a;
+    color: white;
+    background: #16834a;
     font-size: 23px;
-    margin-bottom: 15px;
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
 h3 {
     color: #16834a;
     font-size: 19px;
+    text-align: center;
+    background: #e5f5e9;
+    padding: 12px;
+    border-radius: 12px;
 }
 
-/* Parágrafos */
+/* PARÁGRAFOS */
 
 p {
     font-size: 16px;
-    line-height: 1.6;
-    text-align: justify;
+    line-height: 1.7;
+    text-align: center;
+    background: #f5faf6;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-/* Imagens */
+/* IMAGENS */
 
 img {
     display: block;
     max-width: 100%;
     height: auto;
     margin: 20px auto;
+    border-radius: 18px;
 }
 
 .introducao img {
@@ -85,62 +113,96 @@ img {
     width: 650px;
 }
 
-/* Os 5 Rs sem cartões */
+/* OS 5 RS */
 
 .container-rs {
-    display: block;
-    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .card {
-    background: none;
-    border: none;
-    padding: 5px 0;
-    margin-bottom: 15px;
+    background: #f0f9f2;
+    border: 2px solid #ccebd5;
+    padding: 18px;
+    border-radius: 18px;
+    transition: none;
+}
+
+/* SEM ANIMAÇÕES NOS CARTÕES */
+
+.card:hover {
+    transform: none;
+    box-shadow: none;
 }
 
 .card h3 {
     color: #16834a;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .card p {
     margin-top: 5px;
 }
 
-/* Listas */
+/* LISTAS */
 
 ul {
-    padding-left: 25px;
+    padding: 20px 35px;
+    background: #f5faf6;
+    border-radius: 15px;
 }
 
 li {
-    margin-bottom: 10px;
-    line-height: 1.5;
+    margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-/* Rodapé */
+/* BOTÃO */
+
+.botao {
+    display: inline-block;
+    background-color: #16834a;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+/* RODAPÉ */
 
 footer {
     background-color: #16834a;
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 25px;
+    border-radius: 25px 25px 0 0;
 }
 
 footer h2 {
     color: white;
+    background: transparent;
+    margin-bottom: 15px;
 }
 
 footer p {
+    color: white;
+    background: transparent;
     text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .creditos {
     font-size: 13px;
 }
 
-/* Celulares */
+/* CELULARES */
 
 @media (max-width: 600px) {
 
@@ -148,13 +210,22 @@ footer p {
         width: 92%;
     }
 
+    .container-rs {
+        grid-template-columns: 1fr;
+    }
+
+    .conclusao p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+
     header h1 {
         font-size: 25px;
     }
 
-    .imagem-mundo,
-    .imagem-metas {
-        width: 100%;
+    .botao {
+        display: block;
+        width: fit-content;
     }
 
 }
