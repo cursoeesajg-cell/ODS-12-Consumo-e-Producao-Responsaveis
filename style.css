@@ -5,12 +5,20 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4faf5;
     color: #222;
     margin: 0;
     padding: 0;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* CABEÇALHO */
@@ -21,6 +29,7 @@ header {
     text-align: center;
     padding: 30px 20px;
     border-radius: 0 0 25px 25px;
+    width: 100%;
 }
 
 header h1 {
@@ -29,6 +38,7 @@ header h1 {
     padding: 18px;
     border-radius: 18px;
     display: inline-block;
+    max-width: 100%;
 }
 
 header p {
@@ -56,6 +66,7 @@ section {
     border: 2px solid #d8efdf;
     border-radius: 20px;
     box-shadow: 0 4px 12px rgba(22, 131, 74, 0.08);
+    min-width: 0;
 }
 
 /* TÍTULOS */
@@ -68,6 +79,7 @@ h2 {
     padding: 15px;
     border-radius: 15px;
     margin-bottom: 20px;
+    overflow-wrap: break-word;
 }
 
 h3 {
@@ -77,6 +89,7 @@ h3 {
     background: #e5f5e9;
     padding: 12px;
     border-radius: 12px;
+    overflow-wrap: break-word;
 }
 
 /* PARÁGRAFOS */
@@ -89,6 +102,7 @@ p {
     padding: 15px;
     border-radius: 12px;
     margin-bottom: 15px;
+    overflow-wrap: break-word;
 }
 
 /* IMAGENS */
@@ -117,7 +131,7 @@ img {
 
 .container-rs {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 15px;
     margin-top: 20px;
 }
@@ -128,6 +142,7 @@ img {
     padding: 18px;
     border-radius: 18px;
     transition: none;
+    min-width: 0;
 }
 
 /* SEM ANIMAÇÕES NOS CARTÕES */
@@ -157,6 +172,21 @@ ul {
 li {
     margin-bottom: 12px;
     line-height: 1.6;
+    overflow-wrap: break-word;
+}
+
+/* CONCLUSÃO */
+
+.conclusao p {
+    margin-bottom: 25px;
+    padding: 20px;
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.titulo-reflexao {
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 /* BOTÃO */
@@ -172,6 +202,7 @@ li {
     border-radius: 12px;
     text-align: center;
     margin: 15px auto;
+    max-width: 100%;
 }
 
 /* RODAPÉ */
@@ -182,6 +213,7 @@ footer {
     text-align: center;
     padding: 25px;
     border-radius: 25px 25px 0 0;
+    width: 100%;
 }
 
 footer h2 {
@@ -202,30 +234,190 @@ footer p {
     font-size: 13px;
 }
 
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+    main {
+        width: 90%;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .imagem-mundo {
+        width: 80%;
+    }
+
+    .imagem-metas {
+        width: 90%;
+    }
+
+    .container-rs {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
 /* CELULARES */
 
 @media (max-width: 600px) {
 
-    main {
-        width: 92%;
+    body {
+        width: 100%;
     }
 
-    .container-rs {
-        grid-template-columns: 1fr;
-    }
+    /* CABEÇALHO */
 
-    .conclusao p {
-        font-size: 18px;
-        line-height: 1.7;
+    header {
+        padding: 25px 15px;
+        border-radius: 0 0 18px 18px;
     }
 
     header h1 {
-        font-size: 25px;
+        font-size: 24px;
+        padding: 15px;
+        width: auto;
     }
+
+    header p {
+        font-size: 15px;
+        padding: 12px;
+        line-height: 1.5;
+    }
+
+    /* CONTEÚDO */
+
+    main {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 18px;
+        border-radius: 15px;
+    }
+
+    /* TÍTULOS */
+
+    h2 {
+        font-size: 19px;
+        padding: 13px;
+        line-height: 1.4;
+    }
+
+    h3 {
+        font-size: 17px;
+        padding: 10px;
+    }
+
+    /* PARÁGRAFOS */
+
+    p {
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 12px;
+    }
+
+    .conclusao p {
+        font-size: 15px;
+        line-height: 1.8;
+        padding: 13px;
+        text-align: left;
+    }
+
+    /* IMAGENS */
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .introducao img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .imagem-mundo {
+        width: 100%;
+    }
+
+    .imagem-metas {
+        width: 100%;
+    }
+
+    /* OS 5 RS */
+
+    .container-rs {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    /* LISTAS */
+
+    ul {
+        padding: 15px 25px;
+    }
+
+    li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* BOTÃO */
 
     .botao {
         display: block;
-        width: fit-content;
+        width: 100%;
+        max-width: 250px;
+        padding: 14px 15px;
+        font-size: 16px;
+        margin: 20px auto;
+    }
+
+    /* RODAPÉ */
+
+    footer {
+        padding: 20px 15px;
+        border-radius: 18px 18px 0 0;
+    }
+
+    footer h2 {
+        font-size: 19px;
+    }
+
+    footer p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .creditos {
+        font-size: 12px;
     }
 
 }
+
+/* CELULARES MUITO PEQUENOS */
+
+@media (max-width: 360px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    h2 {
+        font-size: 17px;
+    }
+
+    section {
+        padding: 12px;
+    }
+
+    p {
+        font
