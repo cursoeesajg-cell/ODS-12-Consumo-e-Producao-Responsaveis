@@ -288,6 +288,118 @@ Restos de frutas, verduras e outros resíduos orgânicos podem ser transformados
     <p>
         Afinal, cuidar do planeta é uma responsabilidade de todos!
     </p>
+ 
+<a id="botaovideo" href="https://www.youtube.com/watch?v=F1SwXe9Wd50" target="_blank">
+    Vídeo Sobre a ODS 12
+</a>
+
+<!-- QUIZ INTERATIVO - ODS 12 -->
+<section class="quiz">
+    <h2> Quiz: Teste seus conhecimentos sobre a ODS 12!</h2>
+
+    <p>Responda às perguntas e descubra quanto você sabe sobre consumo responsável.</p>
+
+    <form id="quizForm">
+
+        <div class="pergunta">
+            <h3>1. Qual é o principal objetivo da ODS 12?</h3>
+            <label><input type="radio" name="q1" value="a"> Promover consumo e produção responsáveis</label>
+            <label><input type="radio" name="q1" value="b"> Aumentar o desperdício</label>
+            <label><input type="radio" name="q1" value="c"> Incentivar o consumo exagerado</label>
+        </div>
+
+        <div class="pergunta">
+            <h3>2. O que significa REPENSAR?</h3>
+            <label><input type="radio" name="q2" value="a"> Comprar mais produtos</label>
+            <label><input type="radio" name="q2" value="b"> Refletir sobre nossos hábitos de consumo</label>
+            <label><input type="radio" name="q2" value="c"> Jogar objetos fora</label>
+        </div>
+
+        <div class="pergunta">
+            <h3>3. Qual atitude ajuda a economizar água?</h3>
+            <label><input type="radio" name="q3" value="a"> Deixar a torneira aberta</label>
+            <label><input type="radio" name="q3" value="b"> Tomar banhos demorados</label>
+            <label><input type="radio" name="q3" value="c"> Fechar a torneira ao escovar os dentes</label>
+        </div>
+
+        <div class="pergunta">
+            <h3>4. A reciclagem ajuda a preservar o meio ambiente?</h3>
+            <label><input type="radio" name="q4" value="a"> Sim</label>
+            <label><input type="radio" name="q4" value="b"> Não</label>
+        </div>
+
+        <div class="pergunta">
+            <h3>5. Qual é uma consequência do consumo exagerado?</h3>
+            <label><input type="radio" name="q5" value="a"> Diminuição da poluição</label>
+            <label><input type="radio" name="q5" value="b"> Aumento do lixo e da poluição</label>
+            <label><input type="radio" name="q5" value="c"> Preservação automática das florestas</label>
+        </div>
+
+
+        <button type="button" onclick="corrigirQuiz()">Finalizar Quiz</button>
+
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+</section>
+
+<script>
+function corrigirQuiz() {
+
+    const respostas = {
+        q1: "a",
+        q2: "b",
+        q3: "c",
+        q4: "a",
+        q5: "b",
+       
+    };
+
+    let pontos = 0;
+    let total = Object.keys(respostas).length;
+    let respondidas = 0;
+
+    for (let pergunta in respostas) {
+        const selecionada = document.querySelector(
+            'input[name="' + pergunta + '"]:checked'
+        );
+
+        if (selecionada) {
+            respondidas++;
+
+            if (selecionada.value === respostas[pergunta]) {
+                pontos++;
+            }
+        }
+    }
+
+    const resultado = document.getElementById("resultado");
+
+    if (respondidas < total) {
+        resultado.innerHTML =
+            " Responda todas as perguntas antes de finalizar!";
+        return;
+    }
+
+    let mensagem = "";
+
+    if ((pontos >= 5)) {
+        mensagem = " Parabéns! Você é um especialista em sustentabilidade!";
+    } else if (pontos >= 3) {
+        mensagem = " Bom trabalho! Continue aprendendo sobre sustentabilidade!";
+    } else {
+        mensagem = " Continue estudando! Pequenas atitudes fazem a diferença!";
+    }
+
+    resultado.innerHTML =
+        "<h3>Seu resultado:</h3>" +
+        "<p>Você acertou <strong>" + pontos +
+        " de " + total + " perguntas!</strong></p>" +
+        "<p>" + mensagem + "</p>" +
+        "<button onclick='location.reload()'>Tentar novamente</button>";
+}
+</script>
+
 
 </section>
 
@@ -314,4 +426,3 @@ Restos de frutas, verduras e outros resíduos orgânicos podem ser transformados
 
 </body>
 </html>
-
