@@ -17,9 +17,8 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4faf5;
     color: #222;
-    margin: 0;
+    margin: 250px;
     padding: 0;
-    width: 100%;
     min-width: 320px;
     overflow-x: clip;
 }
@@ -55,20 +54,15 @@ header p {
     border-radius: 15px;
 }
 
-/* ========================================
-   CONTEÚDO PRINCIPAL
-======================================== */
+
 
 main {
     width: 85%;
     max-width: 1000px;
     margin: 30px auto;
 }
-
-/* ========================================
-   SEÇÕES
-======================================== */
-
+ 
+                                                                                                     
 section {
     background: white;
     padding: 25px;
@@ -78,11 +72,7 @@ section {
     box-shadow: 0 4px 12px rgba(22, 131, 74, 0.08);
     min-width: 0;
 }
-
-/* ========================================
-   TÍTULOS
-======================================== */
-
+   
 h2 {
     color: white;
     background: #16834a;
@@ -104,9 +94,7 @@ h3 {
     overflow-wrap: break-word;
 }
 
-/* ========================================
-   PARÁGRAFOS
-======================================== */
+
 
 p {
     font-size: 16px;
@@ -119,9 +107,6 @@ p {
     overflow-wrap: break-word;
 }
 
-/* ========================================
-   IMAGENS
-======================================== */
 
 img {
     display: block;
@@ -143,9 +128,7 @@ img {
     width: 650px;
 }
 
-/* ========================================
-   OS 5 RS
-======================================== */
+
 
 .container-rs {
     display: grid;
@@ -177,9 +160,6 @@ img {
     margin-top: 5px;
 }
 
-/* ========================================
-   LISTAS
-======================================== */
 
 ul {
     padding: 20px 35px;
@@ -193,9 +173,6 @@ li {
     overflow-wrap: break-word;
 }
 
-/* ========================================
-   CONCLUSÃO
-======================================== */
 
 .conclusao p {
     margin-bottom: 25px;
@@ -209,9 +186,6 @@ li {
     margin-bottom: 20px;
 }
 
-/* ========================================
-   BOTÃO GERAL
-======================================== */
 
 .botao {
     display: inline-block;
@@ -237,10 +211,6 @@ li {
 .botao:active {
     transform: scale(0.97);
 }
-
-/* ========================================
-   RODAPÉ
-======================================== */
 
 footer {
     background-color: #16834a;
@@ -269,9 +239,7 @@ footer p {
     font-size: 13px;
 }
 
-/* ========================================
-   QUIZ ODS 12
-======================================== */
+
 
 .quiz {
     background-color: #f0f8f0;
@@ -320,7 +288,7 @@ footer p {
     accent-color: #328b43;
 }
 
-/* RESULTADO DO QUIZ */
+
 
 .resultado {
     text-align: center;
@@ -363,9 +331,7 @@ footer p {
     transform: scale(0.97);
 }
 
-/* ========================================
-   BOTÃO DO VÍDEO
-======================================== */
+
 
 #botaovideo {
     display: block;
@@ -394,9 +360,7 @@ footer p {
     transform: scale(0.95);
 }
 
-/* ========================================
-   ACESSIBILIDADE
-======================================== */
+
 
 button:focus-visible,
 a:focus-visible,
@@ -405,9 +369,6 @@ input:focus-visible {
     outline-offset: 3px;
 }
 
-/* ========================================
-   TABLETS
-======================================== */
 
 @media (max-width: 900px) {
 
@@ -433,9 +394,7 @@ input:focus-visible {
 
 }
 
-/* ========================================
-   CELULARES
-======================================== */
+
 
 @media (max-width: 600px) {
 
@@ -443,7 +402,7 @@ input:focus-visible {
         width: 100%;
     }
 
-    /* CABEÇALHO */
+   
 
     header {
         padding: 25px 15px;
@@ -488,7 +447,7 @@ input:focus-visible {
         padding: 10px;
     }
 
-    /* PARÁGRAFOS */
+    
 
     p {
         font-size: 15px;
@@ -559,7 +518,7 @@ input:focus-visible {
         padding: 14px 20px;
     }
 
-    /* QUIZ */
+    
 
     .quiz {
         padding: 20px;
@@ -597,9 +556,6 @@ input:focus-visible {
 
 }
 
-/* ========================================
-   CELULARES MUITO PEQUENOS
-======================================== */
 
 @media (max-width: 360px) {
 
@@ -625,9 +581,7 @@ input:focus-visible {
 
 }
 
-/* ========================================
-   REDUÇÃO DE MOVIMENTO
-======================================== */
+
 
 @media (prefers-reduced-motion: reduce) {
 
@@ -645,9 +599,7 @@ input:focus-visible {
 
 }
 
-/* ========================================
-   BOTÃO DO VÍDEO
-======================================== */
+
 
 #botaovideo {
     display: block;
